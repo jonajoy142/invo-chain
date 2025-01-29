@@ -4,7 +4,7 @@ from pydantic import BaseModel, condecimal
 from datetime import datetime
 
 class TransactionBase(BaseModel):
-    amount: condecimal(max_digits=20, decimal_places=2)
+    amount: float
     transaction_type: str
     blockchain_tx_hash: str
 
