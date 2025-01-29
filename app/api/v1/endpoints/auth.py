@@ -18,7 +18,7 @@ async def signup(user: UserCreate,):
         print(auth_response, "AUTH RESPONSE TEST")
         new_user = auth_response.user
         user_response = User(
-            id=new_user.id,  # Adjust with the actual fields in `auth_response.user`
+            id=new_user["sub"],  # Adjust with the actual fields in `auth_response.user`
             email=new_user.email,
             wallet_address=user.wallet_address,
             user_type=user.user_type,
